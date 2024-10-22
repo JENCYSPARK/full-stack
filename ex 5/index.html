@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classifieds Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="header">
+        <h1>Classifieds Web App</h1>
+        <button id="loginBtn">Login</button>
+        <button id="signupBtn">Sign Up</button>
+        <button id="dashboardBtn" style="display:none;">Dashboard</button>
+        <button id="logoutBtn" style="display:none;">Logout</button>
+        <button id="addProductBtn" style="display:none;">Add Product</button>
+    </div>
+
+    <div id="search">
+        <input type="text" id="searchInput" placeholder="Search for products..." onkeyup="searchProducts()">
+    </div>
+
+    <div id="homePage" style="display:none;">
+        <h2>Available Products</h2>
+        <img src="https://via.placeholder.com/800x300?text=Welcome+to+Our+Classifieds" alt="Classifieds Banner" style="width:100%; height:auto;">
+        <div id="productList"></div>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+        <h2>Your Dashboard</h2>
+        <button id="backToHomeBtn">Back to Home</button>
+        <h3>Your Products</h3>
+        <div id="userProductsList"></div>
+        <h3>Purchase History</h3>
+        <div id="purchaseHistoryList"></div>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div id="addProductModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Product</h2>
+            <input type="text" id="productName" placeholder="Product Name">
+            <input type="number" id="productPrice" placeholder="Price in ₹">
+            <input type="text" id="productImage" placeholder="Image URL">
+            <textarea id="productDescription" placeholder="Description"></textarea>
+            <input type="text" id="productContact" placeholder="Contact Details">
+            <button id="submitProductBtn">Add Product</button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-login">&times;</span>
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button id="loginSubmitBtn">Login</button>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close-signup">&times;</span>
+            <h2>Sign Up</h2>
+            <input type="text" id="signupUsername" placeholder="Username">
+            <input type="password" id="signupPassword" placeholder="Password">
+            <button id="signupSubmitBtn">Sign Up</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
